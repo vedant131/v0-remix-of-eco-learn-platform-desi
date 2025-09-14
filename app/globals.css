@@ -1,0 +1,343 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated to nature-inspired color palette representing forests, rivers, earth, and sky */
+  --background: #ffffff; /* Pure white for clarity and openness */
+  --foreground: #374151; /* Dark gray for excellent readability */
+  --card: #f1f5f9; /* Soft light gray for card backgrounds */
+  --card-foreground: #374151; /* Dark text on cards */
+  --popover: #ffffff; /* White popover backgrounds */
+  --popover-foreground: #374151; /* Dark text in popovers */
+  --primary: #4caf50; /* Rich forest green for primary actions */
+  --primary-foreground: #ffffff; /* White text on primary buttons */
+  --secondary: #2196f3; /* Vibrant blue representing rivers and sky */
+  --secondary-foreground: #ffffff; /* White text on secondary buttons */
+  --muted: #8d6e63; /* Earthy brown representing soil */
+  --muted-foreground: #4b5563; /* Fixed contrast - dark gray instead of white for light backgrounds */
+  --accent: #2196f3; /* Vibrant blue for accent elements */
+  --accent-foreground: #ffffff; /* White text on accent backgrounds */
+  --destructive: #dc2626; /* Red for destructive actions */
+  --destructive-foreground: #ffffff; /* White text on destructive backgrounds */
+  --border: #d1d5db; /* Light gray for borders */
+  --input: #f1f5f9; /* Input fields background */
+  --ring: rgba(33, 150, 243, 0.5); /* Blue ring for focus states */
+  --chart-1: #4caf50; /* Forest green for charts */
+  --chart-2: #2196f3; /* Sky blue for charts */
+  --chart-3: #8d6e63; /* Earth brown for charts */
+  --chart-4: #fbc02d; /* Sunshine yellow for charts */
+  --chart-5: #dc2626; /* Alert red for charts */
+  --radius: 0.75rem; /* Rounded corners for friendly feel */
+  --sidebar: #f1f5f9; /* Light gray for sidebar */
+  --sidebar-foreground: #374151; /* Dark text in sidebar */
+  --sidebar-primary: #4caf50; /* Primary green for sidebar elements */
+  --sidebar-primary-foreground: #ffffff; /* White text on sidebar primary elements */
+  --sidebar-accent: #2196f3; /* Accent blue for sidebar */
+  --sidebar-accent-foreground: #ffffff; /* White text on sidebar accent elements */
+  --sidebar-border: #d1d5db; /* Light gray for sidebar borders */
+  --sidebar-ring: rgba(33, 150, 243, 0.5); /* Blue ring for sidebar focus */
+}
+
+.dark {
+  /* Enhanced dark mode with nature-inspired colors */
+  --background: #0f172a; /* Deep night sky */
+  --foreground: #f1f5f9; /* Light text for contrast */
+  --card: #1e293b; /* Dark card backgrounds */
+  --card-foreground: #e2e8f0; /* Light text on dark cards */
+  --popover: #334155; /* Dark popover backgrounds */
+  --popover-foreground: #f1f5f9; /* Light text in popovers */
+  --primary: #66bb6a; /* Lighter forest green for dark mode */
+  --primary-foreground: #0f172a; /* Dark text on light green */
+  --secondary: #64b5f6; /* Lighter sky blue for dark mode */
+  --secondary-foreground: #0f172a; /* Dark text on light blue */
+  --muted: #a1887f; /* Lighter earth brown for dark mode */
+  --muted-foreground: #cbd5e1; /* Light gray for good contrast on dark backgrounds */
+  --accent: #64b5f6; /* Lighter blue for accent elements */
+  --accent-foreground: #0f172a; /* Dark text on light blue */
+  --destructive: #ef4444; /* Bright red for alerts */
+  --destructive-foreground: #ffffff; /* White text on red */
+  --border: #334155; /* Dark borders */
+  --input: #1e293b; /* Dark input backgrounds */
+  --ring: rgba(100, 181, 246, 0.5); /* Light blue ring for focus */
+  --chart-1: #66bb6a; /* Light green for charts */
+  --chart-2: #64b5f6; /* Light blue for charts */
+  --chart-3: #a1887f; /* Light brown for charts */
+  --chart-4: #fff176; /* Light yellow for charts */
+  --chart-5: #ef4444; /* Bright red for charts */
+  --sidebar: #0f172a; /* Dark sidebar */
+  --sidebar-foreground: #f1f5f9; /* Light text in sidebar */
+  --sidebar-primary: #66bb6a; /* Light green for sidebar primary */
+  --sidebar-primary-foreground: #0f172a; /* Dark text on light green */
+  --sidebar-accent: #64b5f6; /* Light blue for sidebar accent */
+  --sidebar-accent-foreground: #0f172a; /* Dark text on light blue */
+  --sidebar-border: #334155; /* Dark borders in sidebar */
+  --sidebar-ring: rgba(100, 181, 246, 0.5); /* Light blue ring for sidebar focus */
+}
+
+/* Enhanced nature-inspired animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(calc(100vw + 100px));
+  }
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(calc(100vh + 100px)) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce-gentle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes sparkle {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 1;
+  }
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+/* Added new nature-inspired animations */
+@keyframes sway {
+  0%,
+  100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-drift {
+  animation: drift 20s linear infinite;
+}
+
+.animate-fall {
+  animation: fall 8s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+.animate-bounce-gentle {
+  animation: bounce-gentle 2s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 3s ease-in-out infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 1s ease-in-out infinite;
+}
+
+/* Added new nature animation classes */
+.animate-sway {
+  animation: sway 4s ease-in-out infinite;
+}
+
+.animate-ripple {
+  animation: ripple 2s ease-out infinite;
+}
+
+.animate-grow {
+  animation: grow 0.5s ease-out;
+}
+
+/* Enhanced glassmorphism with better contrast for text */
+.glass {
+  background: rgba(241, 245, 249, 0.8); /* Slightly more opaque for better text contrast */
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(76, 175, 80, 0.2); /* Forest green border */
+}
+
+.glass-dark {
+  background: rgba(30, 41, 59, 0.4); /* Dark glass effect */
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(102, 187, 106, 0.2); /* Light green border for dark mode */
+}
+
+/* Updated gradient utilities with nature-inspired themes */
+.nature-gradient {
+  background: linear-gradient(135deg, #4caf50 0%, #2196f3 100%); /* Forest to sky */
+}
+
+.earth-gradient {
+  background: linear-gradient(135deg, #8d6e63 0%, #4caf50 100%); /* Earth to forest */
+}
+
+.sky-gradient {
+  background: linear-gradient(135deg, #2196f3 0%, #ffffff 100%); /* Sky to clouds */
+}
+
+.ecosystem-gradient {
+  background: linear-gradient(135deg, #8d6e63 0%, #4caf50 50%, #2196f3 100%); /* Earth to forest to sky */
+}
+
+.seasonal-gradient {
+  background: linear-gradient(45deg, #4caf50, #2196f3, #fbc02d, #8d6e63);
+  background-size: 400% 400%;
+  animation: gradient-shift 6s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Added nature-themed utility classes */
+.forest-shadow {
+  box-shadow: 0 4px 20px rgba(76, 175, 80, 0.15);
+}
+
+.sky-shadow {
+  box-shadow: 0 4px 20px rgba(33, 150, 243, 0.15);
+}
+
+.earth-shadow {
+  box-shadow: 0 4px 20px rgba(141, 110, 99, 0.15);
+}
+
+.nature-border {
+  border: 2px solid rgba(76, 175, 80, 0.3);
+}
+
+.sky-border {
+  border: 2px solid rgba(33, 150, 243, 0.3);
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
